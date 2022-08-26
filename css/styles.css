@@ -1,8 +1,204 @@
+/* Reset */
+
 * {
+    padding: 0;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+/* Varables */
+
+:root {
+    --main-color: #548689;  
+    --main-text-color: #FFF;
+    --border-color: #999;
+    --bio-bg-color: #1e2a3a;
+    --bio-border-color: #293544;
+    --about-bg-color: #111821;  
 }
 
-
-h1 {
-    color: red
+/* General */
+.highlight {
+    color: var(--main-color)
 }
+
+/* Container */
+
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+}
+
+#bio-container{
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background-color: var(--bio-bg-color);
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--bio-border-color);
+}
+
+#about-container {
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: var(--about-bg-color);
+    padding: 50px;      
+}
+
+#skills-box{
+    height: 100px;
+    width: 100px;
+}
+
+/* Bio container */
+
+#bio-container h2{
+    margin: 25px;
+}
+
+#bio-container #welcome-text{
+    font-weight: bold;
+}
+
+#bio-container p {
+    margin: 20px;
+}
+
+#bio-img{
+    height: 300px;
+    width: 220px;
+    
+}
+
+#about-container title {
+    margin: 30px;
+}
+ 
+/* Social Container */
+
+#social_container{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-bottom: 1px solid ver(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+#social_container li{
+    flex: 1 1 0;
+    max-width: 60px;
+}
+
+#social_container li a{
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+#email-container{
+    display: flex;
+    justify-content: center;
+}
+
+#email-container a{
+    flex: 1 1 0;
+}
+
+#email-container a{
+   color : var(--main-text-color)
+}
+
+#email-container ion-icon{
+    color: var(--main-color)
+}
+
+#email-container ion-icon{
+    flex: 1 1 0;
+}
+
+/*about container*/
+
+#name {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description {
+    max-width: 75%;
+    margin-bottom: 10px;
+ }
+
+ #btn-projects {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--main-text-color);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    margin: 25px 0;
+    padding: 12 px 10 px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+ }
+
+ #btn-projects ion-icon,
+ #btn-projects span {
+    flex: 1 1 0;
+ }
+
+ #btn-projects ion-icon {
+    font-size: 20px;
+    max-width: 20px;
+ }
+
+ #btn-projects:hover {
+    background-color: transparent;
+ }
+
+ #skills-section-title {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+ }
+
+ #skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+ }
+
+ .skills-box {
+    flex: 1 1 33%;
+    max-width: 33%;
+    margin-bottom: 35px;
+ }
+
+ .skills-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--main-color);
+
+ }
+
+ .skills-box i {
+    font-size: 40px;
+    margin-right: 10px;
+ }
+
+ #skills-course i{
+    font-size: 40;
+    margin-right: 10px;
+ }
