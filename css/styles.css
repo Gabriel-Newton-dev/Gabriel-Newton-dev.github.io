@@ -93,28 +93,30 @@
 
 #social_container li a{
     color: var(--main-color);
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #email-container{
     display: flex;
     justify-content: center;
 }
-
+#email-container ion-icon,
 #email-container a{
     flex: 1 1 0;
 }
 
 #email-container a{
-   color : var(--main-text-color)
+   color : var(--main-text-color);
+   text-decoration: none;
+   max-width: 225px;
+   
 }
 
 #email-container ion-icon{
-    color: var(--main-color)
-}
-
-#email-container ion-icon{
-    flex: 1 1 0;
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 5px;
+    max-width: 20px;
 }
 
 /*about container*/
@@ -198,7 +200,59 @@
     margin-right: 10px;
  }
 
- #skills-course i{
-    font-size: 40;
-    margin-right: 10px;
- }
+
+ /* Mobile */
+ 
+@media(max-width: 450px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #bio-container {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color);
+    }
+    #bio-container h2{
+        display: none;
+    }
+
+    #bio-container p{
+        max-width: 60%;
+        margin: 10px auto;
+    }
+    #about-container {
+        text-align: center;
+        padding: 30px;
+    }
+    
+    #about-container .description {
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    #btn-projects{
+        margin: 20px auto;
+
+    }
+
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .skills-box i{
+        font-size: 60px;
+    }
+
+    #skills-course {
+        text-align: left;
+        flex: 1 1 100;
+     }
+
+
+
+}
